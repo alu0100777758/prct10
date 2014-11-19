@@ -20,7 +20,7 @@ describe Examen do
         @lista=List.new(@nodoVar1)
         @lista.multiple_push([@nodovar2, @nodovar3, @nodovar4, @nodovar5, @nodovar6])
         
-        @examen = Examen.new(@lista, ["a", "b", "c", "d", "c", "a"])
+        @examen = Examen.new(@lista, ["a", "b", "c", "d", "c", "a"], 6)
         
     end
     
@@ -33,6 +33,13 @@ describe Examen do
         it "Tiene respuestas" do
             @examen.respuestas.should eq(["a", "b", "c", "d", "c", "a"])
         end
+        it "Estan ordenadas" do
+            @examen.preguntas[0].should eq(@nodoVar1)
+        end
+         it "Compara respuestas" do
+            @examen.compara_resp(0, "a").should eq(true)
+        end
+        
     end
     
     

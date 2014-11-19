@@ -55,4 +55,17 @@ class List
     def each 
         headToTail.each{|i| yield i}
     end
+    def [] (i)
+        n = 0
+        res = nil
+        
+        headToTail.each{ |w| 
+            if n == i then
+                res = w 
+            else
+              n = n + 1
+          end
+        }
+        return res
+    end
 end
