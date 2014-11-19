@@ -24,8 +24,14 @@ describe Examen do
         
     end
     
-    describe "Existe un examen" do
+    describe "Specs de un examen" do
         it "Existe" do
+        end
+        it "Tiene preguntas" do
+            @examen.preguntas.should eq(@lista)
+        end
+        it "Tiene respuestas" do
+            @examen.respuestas.should eq(["a", "b", "c", "d", "c", "a"])
         end
     end
     
