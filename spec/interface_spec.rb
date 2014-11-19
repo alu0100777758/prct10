@@ -1,6 +1,6 @@
 require "simpleselect.rb"
 
-describe Examen do 
+describe Interface do
     before :all do 
         @var6 = TorFalse.new("6.-) Es apropiado que una clase tablero herede de una clase juego?", 1)
         @var5 = SimpleSelect.new("5.-) Es apropiado que una clase Tablero herede de una clase Juego.",  ["a) Cierto", "b) Falso"], 1)
@@ -19,27 +19,15 @@ describe Examen do
         @lista=List.new(@nodoVar1)
         @lista.multiple_push([@nodovar2, @nodovar3, @nodovar4, @nodovar5, @nodovar6])
         
-        @examen = Examen.new(@lista, ["a", "b", "c", "d", "c", "a"], 6)
+        @interfaz = Interface.new(@lista, ["a", "b", "c", "d", "c", "a"], 6)
         
     end
     
-    describe "Specs de un examen" do
+    describe "Specs de la interfaz de un examen" do
         it "Existe" do
         end
-        it "Tiene preguntas" do
-            @examen.preguntas.should eq(@lista)
+        it "Imprime las preguntas" do
+            @interfaz.comenzar
         end
-        it "Tiene respuestas" do
-            @examen.respuestas.should eq(["a", "b", "c", "d", "c", "a"])
-        end
-        it "Estan ordenadas" do
-            @examen.preguntas[0].should eq(@nodoVar1)
-        end
-         it "Compara respuestas" do
-            @examen.compara_resp(0, "a").should eq(true)
-        end
-        
-    end
-    
-    
+     end
 end
