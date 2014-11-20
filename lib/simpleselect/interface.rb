@@ -5,8 +5,9 @@ class Interface<Examen
       pos=0
       for cuestion in @preguntas.headToTail do
          puts cuestion
-         pos+=1
+         eleccion = gets.chomp
+         compara_resp(pos,eleccion)
+         pos += 1
       end
-      puts @preguntas.headToTail().each{|i| puts i }
    end
 end
