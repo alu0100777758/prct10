@@ -31,3 +31,5 @@ TODO: Write usage instructions here
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
+
+[![Coverage Status](https://img.shields.io/coveralls/alu0100777758/prct9.svg)](https://coveralls.io/r/alu0100777758/prct9)
