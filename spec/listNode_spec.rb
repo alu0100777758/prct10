@@ -100,5 +100,15 @@ describe ListNode do
            @lista.max.to_s.should  eq("4.-) Cual es el tipo del objeto en el siguiente codigo Ruby?\nclass Objeto\nend\n\na) Una instancia de la clase Class\nb) Una constante\nc) Un objeto\nd) Ninguna de las anteriores\n")
       end
    end
+   describe "se funciona el acceso con []" do
+       it "se puede ejecutar []" do
+           @lista[0]
+       end
+       it "estan ordenadas" do
+           @lista[0].to_s.should eq("3.-) Cual es la salida del siguiente codigo Ruby?\nclass Array\ndef say_hi\n\"Hey!\"\nend\nend\np[1, \"bob\"].say_hi\n\na) 1\nb) bob\nc) Hey\nd) Ninguna de las anteriores\n")
+           @lista[1].to_s.should eq("4.-) Cual es el tipo del objeto en el siguiente codigo Ruby?\nclass Objeto\nend\n\na) Una instancia de la clase Class\nb) Una constante\nc) Un objeto\nd) Ninguna de las anteriores\n")
+
+       end
+   end
 end
 
