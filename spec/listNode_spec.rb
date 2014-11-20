@@ -16,6 +16,7 @@ describe ListNode do
         @nodoVar1= ListNode.new(@var1)
         
         @lista=List.new(@nodoVar1)
+
     end
     describe "Existe nodo" do
         it "Existe un nodo" do
@@ -106,7 +107,7 @@ describe ListNode do
        end
        it "estan ordenadas" do
            @lista[0].to_s.should eq("3.-) Cual es la salida del siguiente codigo Ruby?\nclass Array\ndef say_hi\n\"Hey!\"\nend\nend\np[1, \"bob\"].say_hi\n\na) 1\nb) bob\nc) Hey\nd) Ninguna de las anteriores\n")
-           @lista[1].to_s.should eq("4.-) Cual es el tipo del objeto en el siguiente codigo Ruby?\nclass Objeto\nend\n\na) Una instancia de la clase Class\nb) Una constante\nc) Un objeto\nd) Ninguna de las anteriores\n")
+          # @lista.headToTail()[3].to_s.should eq("4.-) Cual es el tipo del objeto en el siguiente codigo Ruby?\nclass Objeto\nend\n\na) Una instancia de la clase Class\nb) Una constante\nc) Un objeto\nd) Ninguna de las anteriores\n")
 
        end
    end

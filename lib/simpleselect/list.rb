@@ -2,6 +2,8 @@ require "simpleselect/listNode.rb"
 
 class List
     include Enumerable
+    attr_reader :head
+    
     #DEFINIR each
     def initialize(nodo)
         raise unless nodo.is_a? (ListNode)
@@ -13,6 +15,7 @@ class List
         nodo.prev=@tail
         @tail.next=nodo
         @tail=nodo
+        
     end
     
     def multiple_push (nodos)
@@ -37,7 +40,11 @@ class List
     def headToTail()
         val=[@head]
         nodo=@head
-        while (nodo!=@tail)do
+        #antes estaba while (nodo != @tail) al parecer 
+        #hay algo raro con la cola, habra que verificarlo.
+        #de todas formas asi funciona porque el ultimo
+        #nodo siempre tiene el next a nil
+        while (nodo.next!=nil)do
             nodo=nodo.next
             val.push(nodo)
         end
