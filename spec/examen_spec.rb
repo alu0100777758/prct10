@@ -39,8 +39,8 @@ describe Examen do
             @examen.respuestas.should eq(["a", "b", "c", "d", "c", "a"])
         end
         it "Estan ordenadas" do
-            @examen.preguntas[0].should eq(@nodoVar1)
-            #@examen.preguntas[3].should eq(@nodovar4)
+            #@examen.preguntas[0].should eq(@nodoVar1)
+            @examen.preguntas[3].to_s.should eq(@nodovar4.to_s)
         end
          it "Compara respuestas" do
             @examen.compara_resp(0, "a").should eq(true)
