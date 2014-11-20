@@ -1,4 +1,4 @@
-require "simpleselect/interface.rb"
+require "simpleselect.rb"
 
         @var6 = TorFalse.new("6.-) Es apropiado que una clase tablero herede de una clase juego?", 1)
         @var5 = SimpleSelect.new("5.-) Es apropiado que una clase Tablero herede de una clase Juego.",  ["a) Cierto", "b) Falso"], 1)
