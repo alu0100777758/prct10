@@ -16,10 +16,20 @@ describe Examen do
         @nvar2=ListNode.new(@v2)
         @nVar1= ListNode.new(@v1)
         
+        @r1=ListNode.new("a")
+        @r2=ListNode.new("b")
+        @r3=ListNode.new("c")
+        @r4=ListNode.new("d")
+        @r5=ListNode.new("c")
+        @r6=ListNode.new("a")
+        
         @lista=List.new(@nVar1)
+        @listar=List.new(@r1)
  
         @lista.multiple_push([@nvar2, @nvar3, @nvar4, @nvar5, @nvar6])
-        @examen = Examen.new(@lista, ["a", "b", "c", "d", "c", "a"], 6)
+        @listar.multiple_push([@r2, @r3, @r4, @r5, @r6])
+        
+        @examen = Examen.new(@lista, @listar, 6)
         
     end
     
@@ -30,8 +40,11 @@ describe Examen do
        
             @examen.preguntas.should eq(@lista)
         end
+        it "Las preguntas son una lista" do
+            @examen.preguntas.is_a?(List).should eq(true)
+        end
         it "Tiene respuestas" do
-            @examen.respuestas.should eq(["a", "b", "c", "d", "c", "a"])
+            @examen.respuestas.should eq(@listar)
         end
         it "Estan ordenadas" do
             @examen.preguntas[0].should eq(@nVar1)

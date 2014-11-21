@@ -40,10 +40,6 @@ class List
     def headToTail()
         val=[@head]
         nodo=@head
-        #antes estaba while (nodo != @tail) al parecer 
-        #hay algo raro con la cola, habra que verificarlo.
-        #de todas formas asi funciona porque el ultimo
-        #nodo siempre tiene el next a nil
         while (nodo.next!=nil)do
             nodo=nodo.next
             val.push(nodo)

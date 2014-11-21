@@ -11,7 +11,7 @@ class Examen
     
     def compara_resp (indx, resp)
         a = false
-        if @respuestas[indx] == resp
+        if @respuestas[indx].to_s == resp
             a = true
         end
         a
