@@ -1,5 +1,5 @@
 require "simpleselect.rb"
-
+require "spec_helper"
 describe Interface do
     before :all do 
         @var6 = TorFalse.new("6.-) Es apropiado que una clase tablero herede de una clase juego?", 1)

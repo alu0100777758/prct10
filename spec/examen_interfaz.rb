@@ -1,5 +1,5 @@
 require "simpleselect.rb"
-
+require "spec_helper"
         @var6 = TorFalse.new("6.-) Es apropiado que una clase tablero herede de una clase juego?", 1)
         @var5 = SimpleSelect.new("5.-) Es apropiado que una clase Tablero herede de una clase Juego.",  ["a) Cierto", "b) Falso"], 1)
         @var4 = SimpleSelect.new("4.-) Cual es el tipo del objeto en el siguiente codigo Ruby?\nclass Objeto\nend\n",  ["a) Una instancia de la clase Class", "b) Una constante","c) Un objeto","d) Ninguna de las anteriores"], 4)
