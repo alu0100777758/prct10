@@ -25,7 +25,7 @@ class Interface<Examen
             puts "\e[90mpulse enter para continuar (o i para mas informacion)\e[39m"
             cuestion=gets.chomp.downcase[0]
             if (cuestion == "i") then
-               puts "Actual:#{@pos}\nTotal:#{@n}\nAcertadas:#{@puntuacion}\nFallidas:#{@pos+1-@puntuacion}"
+               puts "Actual:#{@pos+1}\nTotal:#{@n}\nAcertadas:#{@puntuacion}\nFallidas:#{@pos+1-@puntuacion}"
             else break
             end
          end
