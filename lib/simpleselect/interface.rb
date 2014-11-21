@@ -33,10 +33,10 @@ class Interface<Examen
       end
       print "ha obtenido usted una puntuacion de "
       if (@puntuacion < (@pos/2) ) then 
-         print "\e[91m #{@puntuacion}"
+         print "\e[91m SUSPENDIDO D: \e[39m(\e[91m#{@puntuacion}"
       else
-         print "\e[92m #{@puntuacion}"
+         print "\e[92m APROBADO :D \e[39m(\e[92m#{@puntuacion}"
       end
-      print"\e[39m Sobre "+@pos.to_s+"\n"
+      print"\e[39m Sobre "+@pos.to_s+")\n"
    end
 end
