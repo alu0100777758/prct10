@@ -1,8 +1,11 @@
 require "simpleselect/listNode.rb"
-
+  # Clase que define una lista doblemente enlazada formada por elementos {#ListNode}
+  #
+  # @param head [listnode] "puntero" al inicio de la lista
+  # @param dif [listnode] "puntero" al final de la lista
 class List
     include Enumerable
-    attr_reader :head
+    attr_reader :head,:tail
     
     #DEFINIR each
     def initialize(nodo)

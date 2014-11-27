@@ -1,3 +1,8 @@
+  # tipo nodo que actua como eslabón en la clase {#List}
+  #
+  # @param value contenido util que encapsulará
+  # @param next "puntero" al siguiente nodo de la lista
+  # @return prev "puntero" al nodo anterior en la lista
 class ListNode
    include Comparable
    def <=> (other)
