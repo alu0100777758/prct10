@@ -49,7 +49,7 @@ class List
     def tailToHead()
         val=[@tail]
         nodo=@tail
-        while (nodo!=@head)do
+        while (nodo.prev != nil)do
             nodo=nodo.prev
             val.push(nodo)
         end
@@ -61,4 +61,10 @@ class List
     def [] (i)
         headToTail[i]
     end
+    def invertir 
+        val = []
+        self.each {|i| val.unshift(i)}
+        val
+    end
+        
 end

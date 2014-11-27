@@ -1,5 +1,5 @@
 require "simpleselect.rb"
-require "spec_helper"
+#require "spec_helper"
 describe SimpleSelect do
     
      before :all do

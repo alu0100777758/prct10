@@ -1,5 +1,5 @@
 require "simpleselect.rb"
-require "spec_helper"
+#require "spec_helper"
 describe Examen do 
     before :each do 
         @v6 = TorFalse.new("6.-) Es apropiado que una clase tablero herede de una clase juego?", 1)
@@ -48,7 +48,7 @@ describe Examen do
         end
         it "Estan ordenadas" do
             @examen.preguntas[0].should eq(@nVar1)
-             @examen.preguntas[1].should eq(@nvar2)
+            @examen.preguntas[1].should eq(@nvar2)
             @examen.preguntas[3].to_s.should eq("4.-) Cual es el tipo del objeto en el siguiente codigo Ruby?\nclass Objeto\nend\n\na) Una instancia de la clase Class\nb) Una constante\nc) Un objeto\nd) Ninguna de las anteriores\n")
           
       
@@ -56,7 +56,9 @@ describe Examen do
          it "Compara respuestas" do
             @examen.compara_resp(0, "a").should eq(true)
         end
-        
+        it "Invierte el examen" do
+            @examen.preguntas.invertir[0].should eq (@examen.preguntas[(@examen.n) -1])
+        end
     end
     
     
