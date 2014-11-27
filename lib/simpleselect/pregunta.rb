@@ -1,7 +1,7 @@
   # Clase que define una pregunta
   #
-  # @param preg [string] almacena la pregunta
-  # @param dif [Fixnum] valoracion de la dificultad de la pregunta
+  # @attr_reader preg [string] almacena la pregunta
+  # @attr_reader dif [Fixnum] valoracion de la dificultad de la pregunta
 class Pregunta
     attr_reader :preg, :dif
     include Comparable
